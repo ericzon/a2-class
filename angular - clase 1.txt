@@ -1,0 +1,75 @@
+Marc
+https://angular-2-training-book.rangle.io/handout/features/delegation.html
+
+AoT
+Treeshaking: reduce el tamaño de las libs, viendo qué se usa y qué no.
+
+Forms:
+Template driven form
+o
+Todo en js side
+
+delegation en vez de inheritance
+https://angular-2-training-book.rangle.io/handout/features/delegation.html
+
+spread
+
+let args = [1,2,3]
+add(...args)
+
+
+viene un array puro, con todos los métodos típicos de Array
+
+let foo = [1,2,3]
+
+Destructuring
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment
+let [one,two,three] = foo
+
+Typescript
+{} Object literal
+
+
+Shapes
+Si tienen los mismos atributos con los mismos tipos, eso es lo que Ts mira.
+
+
+
+
+type str = string;
+let cheese: str
+
+Union TYpes
+type Age = number | string;
+let myAge: Age = 50;
+let yourAge: Age = 'old';
+
+
+Intersection types
+
+type KickPuncher = Kicker & Puncher;
+
+
+Function Type Definitions
+
+Decorators
+
+Middleware modificador
+
+Class Decorators
+
+
+Bootstraping
+
+
+@Input info que viene del padre
+
+Eventos personalizados (como el (click) pero definidos por nosotros)
+@Output va ligado siempre a un EventEmitter para enviar la info
+
+
+
+
+
+
+

@@ -6,10 +6,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { InputSearchComponent } from './modules/shared/form/input-search/input-search.component';
+import { SharedModule } from './modules/shared/shared.module';
+import { UserModule } from './modules/user/user.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputSearchComponent
   ],
   imports: [
     BrowserModule,
