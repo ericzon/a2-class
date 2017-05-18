@@ -80,7 +80,7 @@ ng g m modules/user/user
 ng g c modules/shared/form/input-search
 
 
-
+ng g c modules/shared/generic-list
 
 
 

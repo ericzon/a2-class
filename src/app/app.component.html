@@ -1,8 +1,4 @@
-<h1>
-  {{title}}
-</h1>
-<md-checkbox ng-model="isChecked" aria-label="Finished?">
-  Finished ?
-</md-checkbox>
-
-<app-input-search [placeholder]="'Search Users'" (onValueChange)="searchUser($event)"></app-input-search>
+<p>
+  <app-input-search [placeholder]="'Search Users'" (onValueChange)="searchUser($event)"></app-input-search>
+  <app-generic-list [items]="users"></app-generic-list>
+</p>

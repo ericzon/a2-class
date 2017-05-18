@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import  { User } from './modules/user/models/user.interface';
+
 
 @Component({
   selector: 'app-root',
@@ -7,8 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works Eric!!';
+  users: User[];
 
   searchUser(value: string) {
-    console.log("searchUser: ",value);
+    console.log("Recibido! searchUser: ",value);
   }
 }
