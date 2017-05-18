@@ -27,4 +27,8 @@ export class AppComponent implements OnInit{
       return user.name.toLowerCase().indexOf(value.toLowerCase()) !== -1;
     });
   }
+
+  show(user: User) {
+    alert(user.name);
+  }
 }

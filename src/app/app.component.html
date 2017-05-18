@@ -1,4 +1,4 @@
 <p>
   <app-input-search [placeholder]="'Search Users'" (onValueChange)="searchUser($event)"></app-input-search>
-  <app-generic-list [items]="users"></app-generic-list>
+  <app-generic-list [items]="users" (onItemClick)="show($event)" ></app-generic-list>
 </p>

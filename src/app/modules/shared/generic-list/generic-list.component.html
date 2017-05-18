@@ -1,5 +1,5 @@
 <p>
   <md-list>
-    <md-list-item *ngFor="let item of items">{{item.name}}</md-list-item>
+    <md-list-item *ngFor="let item of items" (click)="viewInfo(item)">{{item.name}}</md-list-item>
   </md-list>
 </p>

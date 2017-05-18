@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ListItem } from './generic-list-item.interface';
 
 @Component({
@@ -8,9 +8,14 @@ import { ListItem } from './generic-list-item.interface';
 })
 export class GenericListComponent implements OnInit {
   @Input() items: ListItem[];
+  @Output() onItemClick: EventEmitter<ListItem> = new EventEmitter<ListItem>();
   constructor() { }
 
   ngOnInit() {
   }
-
+  
+  viewInfo(item: ListItem) {
+    console.log("item click: ",item);
+    this.onItemClick.emit(item);
+  }
 }
