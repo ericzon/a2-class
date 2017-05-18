@@ -5,14 +5,15 @@ import { CommonModule } from '@angular/common';
 import { InputSearchComponent } from './form/input-search/input-search.component';
 import { GenericListComponent } from './generic-list/generic-list.component';
 
-import { MdList } from '@angular/material';
+import { MdListModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MdListModule
   ],
   declarations: [InputSearchComponent, GenericListComponent],
-  exports: [InputSearchComponent]
+  exports: [InputSearchComponent, GenericListComponent]
 })
 export class SharedModule { }

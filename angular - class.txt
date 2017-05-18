@@ -85,3 +85,55 @@ ng g c modules/shared/generic-list
 
 
 
+ngOnChanges
+ngOnInit
+ngDoCheck -> se llama cada vez q hay un cambio en el contenido
+ngAfterContentInit
+    Aqui se puede ver el contenido de ng-content
+ngAfterContentChecked -> se llama cada vez q hay un cambio en el contenido
+ngAfterViewInit
+    Los view children no serán accesibles hasta este lifecycle hook
+ngAfterViewChecked -> se llama cada vez q hay un cambio en el contenido
+    Por ejemplo, para alinear 2 elementos de distinto tamaño. Aquí ya se ha 
+    pintado todo, así que se puede ver la altura de uno y alinear el otro
+ngOnDestroy
+
+Lo que va en Checkeds debe ser ligero!
+
+elementRef te da acceso a tu componente
+
+Obsevables:
+
+Permite suscribirte (hay varias maneras hot / cold)
+Cualquiera puede suscribirse a sus cambios
+El que se conecta tarde recibe todos los mensajes, desde el 1º al último
+Al suscribirse hay 3 parametros
+- ok
+- error 
+- he terminado, así que cerramos
+
+Si no tiene nadie observando (subscribe), no hace nada.
+Esto implica que luego hay que hacer un unsubscribe
+
+Observable vs Promises
+P: then().then().then()...
+O: haces next en vez de encadenar promesas
+
+al hacer un http.get(...)
+hay que hacer un .flatMap(data => data.json())
+...
+sino devuelve un array de Observables
+
+this.field.valueChanges -> se suscribe a los cambios del modelo del componente
+
+Reactive programming
+
+Cold vs Hot Observables
+Cold: te llega todo, incluso lo de antes de llegar
+Hot: solo te llega a partir de que te has suscrito
+
+ng g s modules/users/services/user
+
+--
+
+Best practice: cada componente es un module

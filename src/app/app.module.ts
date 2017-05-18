@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule, MdListModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdButtonModule, MdCheckboxModule, MdListModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { InputSearchComponent } from './modules/shared/form/input-search/input-search.component';
@@ -13,9 +13,7 @@ import { GenericListComponent } from './modules/shared/generic-list/generic-list
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InputSearchComponent,
-    GenericListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +21,9 @@ import { GenericListComponent } from './modules/shared/generic-list/generic-list
     HttpModule,
     BrowserAnimationsModule,
     MdButtonModule, MdCheckboxModule,
-    MdListModule
+    MdListModule,
+    UserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// My Services
+import { UserService } from './services/user.service';
+
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: []
+  declarations: [],
+  providers: [ UserService ]
 })
 export class UserModule { }

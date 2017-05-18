@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import  { User } from './modules/user/models/user.interface';
-
+import { UserService } from './modules/user/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -11,33 +11,13 @@ export class AppComponent implements OnInit{
   title = 'app works Eric!!';
   allUsers: User[];
   users: User[];
-  
+
+  constructor(private userService: UserService) {
+
+  }
+
   ngOnInit() {
-    this.allUsers = [{
-      name: "Eric",
-      id: 1,
-      active: true
-    }, {
-      name: "Ivan",
-      id: 2,
-      active: true
-    }, {
-      name: "Joan",
-      id: 3,
-      active: true
-    }, {
-      name: "Camilo",
-      id: 4,
-      active: true
-    }, {
-      name: "Karla",
-      id: 5,
-      active: true
-    }, {
-      name: "Konstan",
-      id: 6,
-      active: true
-    }];
+    this.allUsers = this.userService.getUsers();
     this.users = this.allUsers;
   }
 
